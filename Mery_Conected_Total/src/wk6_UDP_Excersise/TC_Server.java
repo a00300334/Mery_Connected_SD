@@ -34,10 +34,10 @@ public class TC_Server {
 	                String sentence = new String(receivePacket.getData());
 	                
 	                double data = Double.parseDouble(sentence);
-	                data = data*9/5-32;
+//	                data = data*9/5-32;
+	                data = ((data*9)/5)+32;
 	                
-	                System.out.println("UDP server Received in easy to read format: " + sentence);
-	         
+	               System.out.println("UDP server Received in easy to read format: " + sentence);
 	               System.out.println("UDP server has taken: " + data);
 	               
 	               String capitalizedSentence = ""+data;

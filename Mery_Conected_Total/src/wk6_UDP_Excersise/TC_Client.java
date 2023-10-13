@@ -25,8 +25,6 @@ public class TC_Client {
 		String text = sc.next();
 		double value = Double.parseDouble(text);
 		
-		
-		
 		// Create Datagram Socket
 		DatagramSocket dg = new DatagramSocket();
 		
@@ -49,6 +47,7 @@ public class TC_Client {
 		// Check recived Datagram
 		dg.receive(reciver_dp);
 		String recived_String = new String(reciver_dp.getData());
+		System.out.println(recived_String);
 		dg.close();
 		
 	}
