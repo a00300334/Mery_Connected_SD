@@ -2,6 +2,7 @@ package tcp;
 
 import java.io.*;
 	import java.net.*;
+import java.util.Scanner;
 	 
 	public class TCPClient {
 	    public static void main(String[] args) {
@@ -10,8 +11,11 @@ import java.io.*;
 	        	Socket clientSocket=new Socket("localhost",1025);
 	     
 	        	System.out.println("Please enter an abbreviatsion hint API: ");
-	        	BufferedReader inFromUser = new BufferedReader( new InputStreamReader(System.in));
-	        	String letter =inFromUser.readLine();
+	        	Scanner sc = new Scanner(System.in);
+	        	
+//	        	BufferedReader inFromUser = new BufferedReader( new InputStreamReader(System.in));
+//	        	String letter =inFromUser.readLine();
+	        	String letter = sc.nextLine();
 	                   
 	        	DataOutputStream outToServer= new DataOutputStream(clientSocket.getOutputStream());
 	            outToServer.writeBytes(letter+"\n");
