@@ -4,12 +4,8 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-public class ProductServer extends ProductImpl{
+public class ProductServer{
 
-	public ProductServer(String description) {
-		super(description);
-	}
-	
 	public static void main(String[] args) {
 		System.out.println("Server is running..");
 		try {
